@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+
+
+
+
+/* media query */
+
+body {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+
+
+/* Mobile First (default) */
+/* Already active without media queries */
+
+/* Tablet */
+@media (min-width: 600px) {
+  /* Adjust padding, font-size, layout for tablets */
+}
+
+/* Small Desktop */
+@media (min-width: 768px) {
+  /* Grid layouts, larger images, nav bar updates */
+}
+
+/* Medium to Large Desktop */
+@media (min-width: 1024px) {
+  /* Side-by-side layouts, full-width containers */
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1440px) {
+  /* Extra spacing, large-scale visuals */
+}

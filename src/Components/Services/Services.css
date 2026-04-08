@@ -1,0 +1,446 @@
+/* ===============================
+   GLOBAL
+=================================*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+section{
+  width:100%;
+  overflow:hidden;
+}
+
+/* ===============================
+   3D PRINTING SERVICES
+=================================*/
+
+.fdm-container {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.fdm-text {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  width: 80px;
+  margin: 20px auto;
+}
+
+.description {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* Layout */
+.fdm-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* GRID LAYOUT */
+
+.fdm-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  margin-top:60px;
+  flex-wrap:wrap;
+}
+
+.fdm-left,
+.fdm-right{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:350px;
+}
+
+.fdm-item{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+}
+
+/* ICON */
+
+.icon-circle {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: 60px;
+  border: 3px solid black;
+  box-shadow: 0 0 0 4px white;
+  /* transition: all 0.3s ease; */
+}
+
+.icon-circle:hover {
+  background-color: #f29b2e;
+  box-shadow: 0 0 0 4px #f29b2e;
+  /* transform: scale(1.05); */
+
+}
+/* TEXT */
+
+.fdm-item h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.fdm-item p{
+  font-size:15px;
+  color:#ccc;
+}
+
+.text-right{
+  text-align:right;
+}
+
+.text-left{
+  text-align:left;
+}
+
+/* IMAGE */
+
+.fdm-image img{
+  width:100%;
+  max-width:380px;
+  height:auto;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.fdm-image img:hover{
+  transform:scale(1.05);
+}
+
+/* ===============================
+   FDM INFORMATION SECTION
+=================================*/
+
+.fv-section{
+  padding:80px 20px;
+  background:white;
+}
+
+.fv-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* iframe responsive */
+
+.fv-frame{
+  width:100%;
+  max-width:450px;
+  height:320px;
+  border:none;
+  border-radius:10px;
+}
+
+/* content */
+
+.fv-content{
+  flex:1;
+  min-width:280px;
+  font-size:16px;
+  line-height:1.7;
+  color:#555;
+}
+
+.fv-content strong{
+  color:#333;
+}
+
+/* button */
+
+.quote-button{
+  margin-top:25px;
+  background:#ff8c1a;
+  color:white;
+  border:none;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.quote-button:hover{
+  background:#ff8c1a;
+}
+
+/* ===============================
+   LAPTOP
+=================================*/
+
+@media (max-width:1200px){
+
+.fdm-content{
+  gap:40px;
+}
+
+}
+
+/* ===============================
+   TABLET
+=================================*/
+
+@media (max-width:992px){
+
+.main-title{
+  font-size:36px;
+}
+
+.fdm-content{
+  flex-direction:column;
+}
+
+.text-right{
+  text-align:center;
+}
+
+.text-left{
+  text-align:center;
+}
+
+.fdm-item{
+  justify-content:center;
+}
+
+}
+
+/* ===============================
+   MOBILE
+=================================*/
+
+@media (max-width:576px){
+
+.main-title{
+  font-size:28px;
+}
+
+.description{
+  font-size:16px;
+}
+
+.fv-frame{
+  height:240px;
+}
+
+.fv-content{
+  text-align:center;
+}
+
+}
+.fdm-left, 
+.fdm-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  max-width: 400px;
+}
+
+/* Image in the center */
+.fdm-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fdm-image img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.fdm-image img:hover {
+  transform: scale(1.05);
+}
+
+.machine-services {
+  padding: 70px 20px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.machine-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.machine-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.machine-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.machine-icon {
+  font-size: 40px;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.machine-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.machine-card p {
+  font-size: 14px;
+  color: #666;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 🔥 IMPORTANT FIX */
+.card-link h3,
+.card-link p {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .machine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .machine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay h1 {
+    font-size: 28px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+}
+
+.materials-section {
+  padding: 70px 20px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.materials-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* TABLE BOX */
+.table-wrapper {
+  width: 90%;
+  max-width: 900px;
+  border: 2px solid #f29b2e;
+  border-radius: 6px;
+  background: #fff;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+/* TABLE */
+.materials-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ✅ FIXED STICKY HEADER */
+.materials-table th {
+  position: sticky;
+  top: 0;
+  background: #f29b2e;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  z-index: 2;
+}
+
+.materials-table td {
+  padding: 14px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.material-name {
+  color: #f29b2e;
+  font-weight: 500;
+}
+
+/* Hover */
+.materials-table tbody tr:hover {
+  background: #fff3e6;
+}
+
+/* Scrollbar */
+.table-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #f29b2e;
+  border-radius: 10px;
+}

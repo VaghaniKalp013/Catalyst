@@ -1,0 +1,115 @@
+.footer {
+  background-color: #1f1f1f;
+  color: gray;
+  padding: 60px 80px 30px;
+  font-family: sans-serif;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+.footer-column {
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f29b2e;
+  border-bottom: 2px solid #f29b2e;
+  padding-bottom: 5px;
+}
+
+/* ✅ FIX: Links styling */
+.footer-column ul li a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #f29b2e;
+}
+
+/* existing */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ✅ Touch section fix */
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+/* ✅ FIX: footer1 width issue */
+.footer1 {
+  max-width: 250px; /* instead of width: 10% */
+  font-size: 14px;
+}
+
+/* ✅ FIX: Button styling */
+.button button {
+  background-color: transparent;
+  border: 2px solid #f29b2e;
+  color: #bbb;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background-color: #f29b2e;
+  color: #000;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .container-footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+}

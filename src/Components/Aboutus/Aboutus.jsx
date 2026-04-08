@@ -1,0 +1,190 @@
+import React, { useEffect } from "react";
+import './AboutUs.css';
+import { Row, Col } from 'react-bootstrap';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
+const Aboutus = () => {
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100,
+  });
+}, []);
+  return (
+    <>
+      <Row className="m-0">
+        <Col lg={4} md={6} sm={12} className="p-0">
+          <div className="aboutBig">
+            <img src="https://media.licdn.com/dms/image/v2/D4D16AQHR1Pdx-6ClxQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1665574130334?e=2147483647&v=beta&t=x-5G6k5Cgg9LUNOcI66dQVPq25kJId-G1lRBmCSyFJM" alt="" />
+          </div>
+        </Col>
+      </Row>
+      <section className="about-intro">
+        <h2 className="title">We Make New Things Possible</h2>
+        <p className='description'>
+          At Catalyst 3D Technology we are passionate about transforming ideas into reality through the power of 3D printing technology.Since our inception.we've been Committed to delivering innovative.precise, and cost-effective 3D printing solutions for businesses, designer, engineers, and creators across various industries.
+          <br />
+          <br />
+          one clear goal: to provide startups and established businesses with customized, high-quality parts on demand.
+          From molding to prototyping, 3D printing, and <a href="#" className="link">Bambu p1s machining</a>, we make premium-quality designs accessible and streamline
+          your production processes from start to finish.
+        </p>
+
+        <div className="vision-mission-section"data-aos="fade-up">
+          <div className="vision-box"data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://image.made-in-china.com/202f0j00jimoUDbqrBcz/Factory-Wholesale-Electrical-Equipment-Supplies-Electrical-Control-Cabinet-Panel-Board.webp"
+              alt="Our Vision"
+              className="vision-image"
+            />
+            <div className="text-content">
+              <h2>Our Vision</h2>
+              <p>
+                Our Vision is to revolutionize product development by being the most
+                description online destination for custom parts, fostering innovation
+                and speed for engineers and creators globally.
+              </p>
+            </div>
+          </div>
+
+          <div className="mission-box" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4E22AQHOyLvgY3UkAg/feedshare-shrink_800/B4EZdVBs6kGcAg-/0/1749478200626?e=2147483647&v=beta&t=t3CU5EBVbLda91E0fypUpPKmijafYvmjo1NDMD9sCUc"
+              alt="Our Mission"
+              className="mission-image"
+            />
+            <div className="text-content">
+              <h2>Our Mission</h2>
+              <p>
+                Our mission is to make the production of designs efficient with
+                innovative digital manufacturing solutions. We want to facilitate
+                product accessibility and offer seamless manufacturing services to
+                our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+          <section id='moulding-section' >
+      <div className="container">
+        <div className="moulding-content">
+
+          {/* Left Image */}
+          <div className="moulding-image"data-aos="fade-right">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/4/EY/CK/RU/90141902/ls220-high-speed-injection.jpg" alt="Injection Moulding Machine" />
+          </div>
+
+          {/* Right Content */}
+          <div className="moulding-text" data-aos="fade-left">
+            <h2>Plastic Injection Moulding Solutions</h2>
+
+            <p>
+             We deliver advanced plastic injection moulding services using high-performance machinery to produce precise, durable, and high-quality components. Our streamlined process ensures consistent results, high efficiency, and superior surface finish—ideal for large-scale production.
+            </p>
+
+            <p>
+              customer-provided designs, we deliver reliable and cost-effective plastic injection moulding solutions—from prototyping to full-scale production—serving automotive, industrial, and consumer applications.
+            </p>
+
+            <div className="moulding-features">
+              <p>✔ High Precision Moulding</p>
+              <p>✔ Consistent Production Quality</p>
+              <p>✔ Fast Cycle Time</p>
+              <p>✔ Durable Plastic Components</p>
+            </div>
+          </div>
+          <link rel="stylesheet" href="./ScrollToHash" />
+        </div>
+      </div>
+    </section>
+
+      <section id="cnc-machining">
+        <div className="about-container">
+
+          {/* LEFT IMAGE */}
+          <div className="about-image"data-aos="zoom-in">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/071/601/491/small/a-large-machine-with-a-large-metal-gear-inside-free-photo.jpg"
+              alt="CNC Machine"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="about-content" data-aos="fade-up">
+
+            <h1>VMC machining</h1>
+            <h2>Who we are</h2>
+
+            <p>
+              We are a leading provider of CNC machining and lathe services,
+              delivering precise and high-quality manufacturing solutions for
+              industries of all sizes. With years of experience and a team of
+              skilled professionals, we specialize in creating custom components
+              that meet the most demanding standards.
+            </p>
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To provide precision-engineered solutions with unmatched quality and
+              reliability, enabling our clients to bring their visions to life.
+            </p>
+
+
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="about">
+        <div className="about-container">
+
+          {/* LEFT IMAGE */}
+          <div className="about-image"data-aos="fade-right">
+            <img
+              src="https://image.made-in-china.com/202f0j00tcOqGZyIrdgV/High-Performance-Vertical-CNC-Milling-Machine-with-800mm-Travel.webp"
+              alt="CNC VMC Machine"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="about-content"data-aos="fade-left">
+
+
+            <h2>
+              Precision CNC Machining <br />
+              & Manufacturing Solutions
+            </h2>
+
+            <p>
+              We are a leading provider of precision CNC machining services, specializing in
+              VMC (Vertical Machining Center) operations. Our advanced machines and skilled
+              engineers ensure high accuracy, repeatability, and superior surface finish.
+            </p>
+
+            <p>
+              From prototyping to mass production, we deliver reliable and cost-effective
+              manufacturing solutions for automotive, aerospace, and industrial sectors.
+            </p>
+
+            <div className="about-features">
+              <div className="feature">✔ High Precision Machining</div>
+              <div className="feature">✔ Skilled Engineers</div>
+              <div className="feature">✔ Quality Assurance</div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default Aboutus

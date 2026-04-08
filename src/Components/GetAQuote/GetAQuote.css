@@ -1,0 +1,228 @@
+/* ================= HERO SECTION ================= */
+
+.quote-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT CONTENT */
+
+.quote-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: #f24f1d;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.quote-content h1 {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* BUTTON */
+
+.gmail-button {
+  margin-top: 25px;
+  padding: 14px 32px;
+  font-size: 18px;
+  background-color: #f24f1d;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.gmail-button:hover {
+  background-color: #d85c10;
+}
+
+/* ================= CONTACT FORM ================= */
+
+.contact {
+  padding: 80px 20px;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-center {
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.contact-form-center h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #f24f1d;
+}
+
+/* INPUT GROUP */
+
+.input-group {
+  width: 100%;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* ✅ FIXED FOCUS (NO CONFLICT) */
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border: 1px solid #ff7a00;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.15);
+}
+
+/* ERROR */
+
+.input-group span {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* PHONE GROUP */
+
+.phone-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-group select {
+  flex: 1;
+}
+
+.phone-group input {
+  flex: 2;
+}
+
+/* FILE UPLOAD */
+
+.file-box {
+  position: relative;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  background: #fafafa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.file-box:hover {
+  border-color: #ff7a00;
+}
+
+.file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.file-text {
+  font-size: 14px;
+  color: #444;
+  pointer-events: none;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+  width: 40%; /* FIX */
+  padding: 14px;
+  border: none;
+  background: linear-gradient(135deg, #ff7a00, #ff9a2a);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .quote-content h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-hero {
+    height: 400px;
+  }
+
+  .quote-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  .quote-content h1 {
+    font-size: 34px;
+  }
+
+  .phone-group {
+    flex-direction: column;
+  }
+
+  .contact {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-hero {
+    height: 320px;
+  }
+
+  .quote-content h1 {
+    font-size: 26px;
+  }
+
+  .gmail-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
