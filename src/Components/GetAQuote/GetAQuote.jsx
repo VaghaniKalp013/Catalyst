@@ -22,7 +22,7 @@ const serviceMaterials = {
   "Plastic Molding": ["Polypropylene", "Polycarbonate", "PVC"],
 };
 
-const API_BASE_URL = "http://11.12.185.24:9000";
+const API_BASE_URL = "*";
 
 const GetAQuote = () => {
   const fileRef = useRef();
