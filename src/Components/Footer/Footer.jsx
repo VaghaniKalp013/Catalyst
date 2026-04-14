@@ -76,8 +76,7 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Visit Our Location</h3>
           <p>
-            B-13 Sumangal Varachha Road <br />
-            Surat, Gujarat 395006
+           
           </p>
 
           <a
