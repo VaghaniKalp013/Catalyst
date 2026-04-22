@@ -3,38 +3,48 @@ import './AboutUs.css';
 import { Row, Col } from 'react-bootstrap';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import About from "../Assets/About.jpg";
 
+
+
+const ServiceCard = () => {
+  const navigate = useNavigate();
+
+  const handleInquire = () => {
+    navigate("/GetAQuote"); // your form page route
+  };
+}
 
 const Aboutus = () => {
   useEffect(() => {
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100,
-  });
-}, []);
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
   return (
     <>
       <Row className="m-0">
         <Col lg={4} md={6} sm={12} className="p-0">
           <div className="aboutBig">
-            <img src="https://media.licdn.com/dms/image/v2/D4D16AQHR1Pdx-6ClxQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1665574130334?e=2147483647&v=beta&t=x-5G6k5Cgg9LUNOcI66dQVPq25kJId-G1lRBmCSyFJM" alt="" />
+            <img src={About} alt="" />
           </div>
         </Col>
       </Row>
       <section className="about-intro">
         <h2 className="title">We Make New Things Possible</h2>
         <p className='description'>
-          At Catalyst 3D Technology we are passionate about transforming ideas into reality through the power of 3D printing technology.Since our inception.we've been Committed to delivering innovative.precise, and cost-effective 3D printing solutions for businesses, designer, engineers, and creators across various industries.
+          At Catalyst 3D Technology, we deliver a complete range of advanced manufacturing solutions designed to turn ideas into high-quality, functional products. Our expertise spans plastic injection moulding, VMC machining, precision CNC machining, and 3D printing, allowing us to support everything from rapid prototyping to full-scale production. With a focus on accuracy, durability, and efficiency, we use modern technologies and advanced equipment to produce complex components with tight tolerances and excellent surface finishes. Whether it’s custom plastic parts, intricate machined components, or innovative prototypes, we ensure every project meets the highest standards of quality and performance.
           <br />
           <br />
-          one clear goal: to provide startups and established businesses with customized, high-quality parts on demand.
-          From molding to prototyping, 3D printing, and <a href="#" className="link">Bambu p1s machining</a>, we make premium-quality designs accessible and streamline
-          your production processes from start to finish.
+          By combining traditional manufacturing with cutting-edge 3D printing technologies, including high-performance systems like Bambu P1S, we help businesses accelerate product development and streamline production processes. Our solutions are tailored for startups, engineers, designers, and established industries, providing cost-effective and scalable manufacturing options. From concept to final production, we are committed to delivering precision, speed, and reliability—empowering our clients to innovate faster and bring their ideas to life with confidence.
         </p>
 
-        <div className="vision-mission-section"data-aos="fade-up">
-          <div className="vision-box"data-aos="fade-up" data-aos-delay="100">
+        <div className="vision-mission-section" data-aos="fade-up">
+          <div className="vision-box" data-aos="fade-up" data-aos-delay="100">
             <img
               src="https://image.made-in-china.com/202f0j00jimoUDbqrBcz/Factory-Wholesale-Electrical-Equipment-Supplies-Electrical-Control-Cabinet-Panel-Board.webp"
               alt="Our Vision"
@@ -70,44 +80,49 @@ const Aboutus = () => {
 
       </section>
 
-          <section id='moulding-section' >
-      <div className="container">
-        <div className="moulding-content">
+      <section id='moulding-section' >
+        <div className="container">
+          <div className="moulding-content">
 
-          {/* Left Image */}
-          <div className="moulding-image"data-aos="fade-right">
-            <img src="https://5.imimg.com/data5/SELLER/Default/2022/4/EY/CK/RU/90141902/ls220-high-speed-injection.jpg" alt="Injection Moulding Machine" />
-          </div>
-
-          {/* Right Content */}
-          <div className="moulding-text" data-aos="fade-left">
-            <h2>Plastic Injection Moulding Solutions</h2>
-
-            <p>
-             We deliver advanced plastic injection moulding services using high-performance machinery to produce precise, durable, and high-quality components. Our streamlined process ensures consistent results, high efficiency, and superior surface finish—ideal for large-scale production.
-            </p>
-
-            <p>
-              customer-provided designs, we deliver reliable and cost-effective plastic injection moulding solutions—from prototyping to full-scale production—serving automotive, industrial, and consumer applications.
-            </p>
-
-            <div className="moulding-features">
-              <p>✔ High Precision Moulding</p>
-              <p>✔ Consistent Production Quality</p>
-              <p>✔ Fast Cycle Time</p>
-              <p>✔ Durable Plastic Components</p>
+            {/* Left Image */}
+            <div className="moulding-image" data-aos="fade-right">
+              <img src="https://5.imimg.com/data5/SELLER/Default/2022/4/EY/CK/RU/90141902/ls220-high-speed-injection.jpg" alt="Injection Moulding Machine" />
             </div>
+
+            {/* Right Content */}
+            <div className="moulding-text" data-aos="fade-left">
+              <h2>Plastic Injection Moulding Solutions</h2>
+
+              <p>
+                We deliver advanced plastic injection moulding services using high-performance machinery to produce precise, durable, and high-quality components. Our streamlined process ensures consistent results, high efficiency, and superior surface finish—ideal for large-scale production.
+              </p>
+
+              <p>
+                customer-provided designs, we deliver reliable and cost-effective plastic injection moulding solutions—from prototyping to full-scale production—serving automotive, industrial, and consumer applications.
+              </p>
+
+              <div className="moulding-features">
+                <p>✔ High Precision Moulding</p>
+                <p>✔ Consistent Production Quality</p>
+                <p>✔ Fast Cycle Time</p>
+                <p>✔ Durable Plastic Components</p>
+              </div>
+              <Link to="/GetAQuote#contact-form-center">
+                <button className="inquire-btn">
+                  Inquire Now →
+                </button>
+              </Link>
+            </div>
+            <link rel="stylesheet" href="./ScrollToHash" />
           </div>
-          <link rel="stylesheet" href="./ScrollToHash" />
         </div>
-      </div>
-    </section>
+      </section>
 
       <section id="cnc-machining">
         <div className="about-container">
 
           {/* LEFT IMAGE */}
-          <div className="about-image"data-aos="zoom-in">
+          <div className="about-image" data-aos="zoom-in">
             <img
               src="https://static.vecteezy.com/system/resources/thumbnails/071/601/491/small/a-large-machine-with-a-large-metal-gear-inside-free-photo.jpg"
               alt="CNC Machine"
@@ -135,17 +150,22 @@ const Aboutus = () => {
               reliability, enabling our clients to bring their visions to life.
             </p>
 
-
+            <Link to="/GetAQuote#contact-form-center">
+              <button className="inquire-btn">
+                Inquire Now →
+              </button>
+            </Link>
           </div>
         </div>
+        <link rel="stylesheet" href="./ScrollToHash" />
       </section>
-      
+
 
       <section id="about">
         <div className="about-container">
 
           {/* LEFT IMAGE */}
-          <div className="about-image"data-aos="fade-right">
+          <div className="about-image" data-aos="fade-right">
             <img
               src="https://image.made-in-china.com/202f0j00tcOqGZyIrdgV/High-Performance-Vertical-CNC-Milling-Machine-with-800mm-Travel.webp"
               alt="CNC VMC Machine"
@@ -153,7 +173,7 @@ const Aboutus = () => {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="about-content"data-aos="fade-left">
+          <div className="about-content" data-aos="fade-left">
 
 
             <h2>
@@ -177,9 +197,15 @@ const Aboutus = () => {
               <div className="feature">✔ Skilled Engineers</div>
               <div className="feature">✔ Quality Assurance</div>
             </div>
-
+          
+            <Link to="/GetAQuote#contact-form-center">
+              <button className="inquire-btn">
+                Inquire Now →
+              </button>
+            </Link>
 
           </div>
+        <link rel="stylesheet" href="./ScrollToHash" />
 
         </div>
       </section>
