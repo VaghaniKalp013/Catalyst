@@ -77,11 +77,11 @@ const materials = [
   }
 ];
 const materialsData = [
-  { name: "ASA", length: 400, width: 400, height: 450 },
-  { name: "PETG", length: 400, width: 400, height: 450 },
-  { name: "PLA", length: 400, width: 400, height: 450 },
-  { name: "Soft Digital Silicone", length: 297, width: 210, height: 200 },
-  { name: "Tough Digital Silicone", length: 297, width: 210, height: 200 },
+  { name: "ASA", length: 250, width: 250, height: 250, temperature: 250 },
+  { name: "PETG", length: 250, width: 250, height: 250, temperature: 250 },
+  { name: "PLA", length: 250, width: 250, height: 250, temperature: 250 },
+  { name: "Soft Digital Silicone", length: 250, width: 250, height: 200, temperature: 250 },
+  { name: "Tough Digital Silicone", length: 250, width: 250, height: 200, temperature: 250 },
 ];
 const Material = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -125,6 +125,7 @@ const Material = () => {
           <th>Maximum Length [mm]</th>
           <th>Maximum Width [mm]</th>
           <th>Maximum Height [mm]</th>
+          <th>Temperature [mm]</th>
         </tr>
       </thead>
 
@@ -135,6 +136,7 @@ const Material = () => {
             <td>{item.length}</td>
             <td>{item.width}</td>
             <td>{item.height}</td>
+            <td>{item.temperature}</td>
           </tr>
         ))}
       </tbody>
