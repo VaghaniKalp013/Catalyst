@@ -18,6 +18,11 @@ import { FaCogs, FaUsers, FaCheck } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import slide1 from "../Assets/BANER_BACKUP-FILE23456.jpg";
+import slide2 from "../Assets/homebanner1.jpg";
+import slide3 from "../Assets/homebanner2.jpg";
+import slide4 from "../Assets/cnc machining.jpeg";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -32,17 +37,64 @@ const Home = () => {
     });
   }, []);
 
+
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+const slides = [slide1, slide2, slide3, slide4];
+
+// Auto slide
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, []);
+
+// Manual controls
+const nextSlide = () => {
+  setCurrentSlide((prev) => (prev + 1) % slides.length);
+};
+
+const prevSlide = () => {
+  setCurrentSlide((prev) =>
+    prev === 0 ? slides.length - 1 : prev - 1
+  );
+};
+
   return (
     <>
       {/* <Navbar /> */}
 
       {/* Big image section */}
-      <div className="centered-section">
-        <div className="centered-content">
-          <img src={logo} alt="" />
-        </div>
-      </div>
+      <div className="slider">
+  {slides.map((slide, index) => (
+    <div
+      key={index}
+      className={index === currentSlide ? "slide active" : "slide"}
+    >
+      {index === currentSlide && (
+        <img src={slide} alt={`slide-${index}`} />
+      )}
+    </div>
+  ))}
 
+  {/* Buttons */}
+  <button className="prev" onClick={prevSlide}>❮</button>
+  <button className="next" onClick={nextSlide}>❯</button>
+</div>
+
+      {/* Dots */}
+        <div className="dots">
+          {slides.map((_, i) => (
+            <span
+              key={i}
+              className={currentSlide === i ? "dot active" : "dot"}
+              onClick={() => setCurrentSlide(i)}
+            />
+          ))}
+        </div>
+      
 
       {/* why-section */}
       <section className="why-section">
@@ -58,7 +110,7 @@ const Home = () => {
           <div className="why-cards">
 
             {/* Card 1 */}
-            <div className="why-card"data-aos="fade-up">
+            <div className="why-card" data-aos="fade-up">
               <div className="icon">
                 <FaCogs />
               </div>
@@ -69,7 +121,7 @@ const Home = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="why-card"data-aos="fade-up" data-aos-delay="100">
+            <div className="why-card" data-aos="fade-up" data-aos-delay="100">
               <div className="icon">
                 <FaUsers />
               </div>
@@ -80,7 +132,7 @@ const Home = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="why-card"data-aos="fade-up" data-aos-delay="200">
+            <div className="why-card" data-aos="fade-up" data-aos-delay="200">
               <div className="icon">
                 <FaCheck />
               </div>
@@ -91,6 +143,14 @@ const Home = () => {
               </p>
             </div>
 
+          </div>
+          <div className="view-services" data-aos="fade-up" data-aos-delay="100">
+            <button
+              className="view-btn"
+              onClick={() => navigate("/services")}
+            >
+              View all services <span className="arrow">→</span>
+            </button>
           </div>
         </div>
       </section>
@@ -149,7 +209,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="step-box"data-aos="zoom-in" data-aos-delay="200">
+              <div className="step-box" data-aos="zoom-in" data-aos-delay="200">
                 <div className="icon-circle">
                   <BsBoxSeam />
                 </div>
@@ -158,8 +218,8 @@ const Home = () => {
 
                 <p>
                   Catalyst 3D Technology affordable
-                  <strong> 3D printing service</strong>
-                  ships your 3D printed parts anywhere in the world with
+                  <strong> 3D printing services </strong>
+                  and ships your 3D printed parts anywhere in the world with
                   Manufacturing on request.
                 </p>
               </div>
@@ -177,7 +237,7 @@ const Home = () => {
             <span className="textorange"><b>_____</b>  </span>3D Printing Application<span className="textorange">  <b>_____</b></span>
           </h3>
           <p className="subtext">
-            Impore your business strategy and speed up your impovation by integrating our Solutions into your operations Benifit from its advantages for proof of concept, production or tooling processes consider the benifit of 3D printing in surat or find a 3D printing service near me to enhance appproach.
+            Impore your business strategy and speed up your innovation by integrating our Solutions into your operations Benifit from its advantages for proof of concept, production or tooling processes consider the benifit of 3D printing in surat or find a 3D printing service near me to enhance appproach.
           </p>
 
 
