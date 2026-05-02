@@ -150,6 +150,10 @@ const Aboutus = () => {
               reliability, enabling our clients to bring their visions to life.
             </p>
 
+          <div className="about-features">
+              <div className="feature">Build Volume: 3 Axis 500 × 400 × 450 mm <br />
+                (X × Y × Z)</div>
+            </div>
             <Link to="/GetAQuote#contact-form-center">
               <button className="inquire-btn">
                 Inquire Now →
@@ -157,6 +161,7 @@ const Aboutus = () => {
             </Link>
           </div>
         </div>
+        
         <link rel="stylesheet" href="./ScrollToHash" />
       </section>
 
@@ -196,6 +201,8 @@ const Aboutus = () => {
               <div className="feature">✔ High Precision Machining</div>
               <div className="feature">✔ Skilled Engineers</div>
               <div className="feature">✔ Quality Assurance</div>
+              <div className="feature">  Build Volume: 200 × 200 × 200 mm &  <br />
+                  500 × 500 × 500 mm</div>
             </div>
           
             <Link to="/GetAQuote#contact-form-center">
