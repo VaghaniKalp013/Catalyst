@@ -40,13 +40,13 @@ const ScrollToHash = () => {
 const services = [
   {
     icon: <FaIndustry />,
-    title: "3-5 Axis CNC Machining",
+    title: "CNC Machining",
     desc: "Advanced multi-axis machining enables the production of intricate and high-precision components with exceptional accuracy.",
-    link: "/aboutus#cnc-machining"
+    link: "/aboutus#about"
   },
   {
     icon: <FaCogs />,
-    title: "VMC",
+    title: "3 Axis VMC",
     desc: "High-precision milling operations powered by advanced VMC systems ensure accurate machining, smooth finishes, and efficient production of complex components across various applications.",
     link: "/aboutus#cnc-machining"
   },
@@ -66,7 +66,7 @@ const services = [
     icon: <FaDraftingCompass />,
     title: "Prototyping",
     desc: "Transform concepts into tangible models with precision and speed, enabling design validation, functional testing, and faster product development.",
-    link: "/aboutus#cnc-machining"
+    link: "/aboutus#about"
   },
   {
     icon: <FaBolt />,
